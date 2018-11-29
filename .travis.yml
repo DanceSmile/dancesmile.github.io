@@ -22,7 +22,6 @@ after_script:
 branches:
   only: 
     - hexo
-
 env:
  global:
    - GH_REF: github.com/DanceSmile/DanceSmile.github.io.git
