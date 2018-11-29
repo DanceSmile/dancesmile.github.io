@@ -1,9 +1,29 @@
 language: node_js
-node_js:
-  - "7"
+node_js: stable
+
 
 # S: Build Lifecycle
 install:
   - npm install
 script:
-  - hexo g
+  - hexo clean
+  - hexo g 
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "zero"
+  - git config user.email "hi.zero.im@google.com"
+  - git add .
+  - git commit  -m "update docs"
+  - git push --force --quite "https//${Travis_Token}@{GH_REF}"
+
+
+branches:
+  only: 
+    - hexo
+
+env:
+ global:
+   - GH_REF: github.com/DanceSmile/DanceSmile.github.io.git
+   
