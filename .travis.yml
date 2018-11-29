@@ -18,11 +18,9 @@ after_script:
   - git commit  -m "update docs"
   - git push --force --quiet "https//${Travis_Token}@${GH_REF}" master:master
 
-
 branches:
   only: 
     - hexo
 env:
  global:
-   - GH_REF: github.com/DanceSmile/DanceSmile.github.io.git
-   
+   - GH_REF:  github.com/DanceSmile/DanceSmile.github.io.git
