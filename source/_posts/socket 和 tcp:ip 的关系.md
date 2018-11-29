@@ -1,5 +1,5 @@
 ---
-title: socket 和 tcp/ip 协议簇的关系
+title: socket 和 tcp/ip 的关系
 date: 2018-11-29 17:13:49
 tags:
 ---
