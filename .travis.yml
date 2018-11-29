@@ -16,7 +16,7 @@ after_script:
   - git config user.email "hi.zero.im@google.com"
   - git add .
   - git commit  -m "update docs"
-  - git push --force --quiet "https//${Travis_Token}@${GH_REF}" master:master
+  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master
 
 branches:
   only: 
